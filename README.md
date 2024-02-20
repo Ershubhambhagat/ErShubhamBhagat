@@ -41,17 +41,23 @@
 <div align="left">
 </div>
 
-###
 
-<img src="https://raw.githubusercontent.com/ershubhambhagat/ershubhambhagat/output/snake.svg" alt="Snake animation" />
-
-###
 
 <div align="center">
   <img src="https://profile-counter.glitch.me/ershubhambhagat/count.svg?"  />
 </div>
 
 ###
+
+<div>
+
+  ###
+
+<img src="https://raw.githubusercontent.com/ershubhambhagat/ershubhambhagat/output/snake.svg" alt="Snake animation" />
+
+###
+</div>
+
 
 <div align="center">
 <a href="https://linkedin.com/in/ershubhambhagat" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ershubhambhagat" height="30" width="40" /></a>
