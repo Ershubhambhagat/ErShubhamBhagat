@@ -59,8 +59,4 @@
 
 ###
 
--->
-<p align="center"> 
-  Visitor count<br>
-  <img src="https://komarev.com/ghpvc/?username=Ershubhambhagat&color=red"/>
-</p>
+
