@@ -37,8 +37,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" height="40" alt="oracle logo"  />
 
-  <img width="12" />
-  <img src=" https://partner.cloudskillsboost.google/public_profiles/8fa585bb-cc83-4c3b-b1ce-56474485c9da" height="40" alt="oracle logo"  />
+  
 </div>
 
 ###
@@ -69,4 +68,5 @@
 
 ###
 
-
+<img width="12" />
+  <img src=" https://partner.cloudskillsboost.google/public_profiles/8fa585bb-cc83-4c3b-b1ce-56474485c9da" height="40" alt="oracle logo"  />
