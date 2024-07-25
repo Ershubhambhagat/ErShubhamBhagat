@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favourite Links</title>
+<style>
+        
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<input type="text" id="searchBar" class="search-bar" placeholder="Search...">
+<div id="buttonsContainer"></div>
+</div>
+<script>
+       document.addEventListener('DOMContentLoaded', () => {
+           fetch('links.json')
+               .then(response => response.json())
+               .then(data => {
+                   const buttonsContainer = document.getElementById('buttonsContainer');
+                   data.links.forEach(link => {
+                       const linkButton = document.createElement('button');
+                       linkButton.className = 'link-button';
+                       linkButton.textContent = link.name;
+                       linkButton.onclick = () => window.open(link.url, '_blank');
+                       buttonsContainer.appendChild(linkButton);
+                       const descriptionButton = document.createElement('button');
+                       descriptionButton.className = 'description-button';
+                       descriptionButton.textContent = 'Show Description';
+                       buttonsContainer.appendChild(descriptionButton);
+                       const description = document.createElement('div');
+                       description.className = 'description';
+                       description.textContent = link.description;
+                       buttonsContainer.appendChild(description);
+                       descriptionButton.onclick = () => {
+                           description.style.display = description.style.display === 'block' ? 'none' : 'block';
+                           descriptionButton.textContent = description.style.display === 'block' ? 'Hide Description' : 'Show Description';
+                       };
+                   });
+               });
+           document.getElementById('searchBar').addEventListener('input', function() {
+               const filter = this.value.toLowerCase();
+               const linkButtons = document.querySelectorAll('.link-button');
+               linkButtons.forEach(button => {
+                   const descriptionButton = button.nextElementSibling;
+                   const description = descriptionButton.nextElementSibling;
+                   const text = button.textContent.toLowerCase();
+                   const descriptionText = description.textContent.toLowerCase();
+                   const isVisible = text.includes(filter) || descriptionText.includes(filter);
+                   button.style.display = isVisible ? '' : 'none';
+                   descriptionButton.style.display = isVisible ? '' : 'none';
+                   if (!isVisible) {
+                       description.style.display = 'none';
+                   }
+               });
+           });
+       });
+</script>
+</body>
+</html>
